@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: flask-app
@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: app-ker
-        imagePullPolicy: Never
+        image: babo12/flask-k8s-app:latest
         ports:
         - containerPort: 5000
         livenessProbe:
