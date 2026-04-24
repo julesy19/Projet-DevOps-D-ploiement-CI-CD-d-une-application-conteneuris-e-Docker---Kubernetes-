@@ -1,4 +1,4 @@
-name: CI/CD Flask K8s
+name: CI Flask (Local Deploy)
 
 on:
   push:
@@ -23,13 +23,3 @@ jobs:
 
     - name: Push image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/flask-k8s-app:latest
-    - name: Set up kubectl
-      uses: azure/setup-kubectl@v4
-
-    - name: Configure kubeconfig
-      run: |
-        mkdir -p $HOME/.kube
-        echo "${{ secrets.KUBECONFIG }}" > $HOME/.kube/config
-
-    - name: Deploy to Kubernetes
-      run: kubectl apply -f k8s/
