@@ -16,6 +16,33 @@
             padding: 40px;
         }
 
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-dashboard {
+            background: #2a5298;
+        }
+
+        .btn-babadiama {
+            background: #1e3c72;
+        }
+
+        .nav a:hover {
+            opacity: 0.85;
+        }
+
         .container {
             max-width: 1100px;
             margin: auto;
@@ -34,8 +61,8 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            overflow: hidden;
             border-radius: 10px;
+            overflow: hidden;
         }
 
         thead {
@@ -77,10 +104,15 @@
         .cat-tech { background: #2196F3; }
         .cat-food { background: #FF9800; }
         .cat-clothes { background: #9C27B0; }
-
     </style>
 </head>
+
 <body>
+
+<div class="nav">
+    <a href="/" class="btn-dashboard">💰 Dashboard</a>
+    <a href="/babadiama" class="btn-babadiama">🌍 Babadiama</a>
+</div>
 
 <div class="container">
     <h1>💰 Product Price List</h1>
@@ -100,35 +132,35 @@
                 <td>Laptop</td>
                 <td><span class="badge cat-tech">Tech</span></td>
                 <td>USA</td>
-                <td class="price">1200</td>
+                <td class="price">$1200</td>
             </tr>
 
             <tr>
                 <td>Rice</td>
                 <td><span class="badge cat-food">Food</span></td>
                 <td>India</td>
-                <td class="price">25</td>
+                <td class="price">$25</td>
             </tr>
 
             <tr>
                 <td>T-Shirt</td>
                 <td><span class="badge cat-clothes">Clothes</span></td>
                 <td>China</td>
-                <td class="price">15</td>
+                <td class="price">$15</td>
             </tr>
 
             <tr>
                 <td>Smartphone</td>
                 <td><span class="badge cat-tech">Tech</span></td>
                 <td>South Korea</td>
-                <td class="price">900</td>
+                <td class="price">$900</td>
             </tr>
 
             <tr>
                 <td>Coffee</td>
                 <td><span class="badge cat-food">Food</span></td>
                 <td>Brazil</td>
-                <td class="price">10</td>
+                <td class="price">$10</td>
             </tr>
         </tbody>
     </table>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Price List</title>
+    <title>Liste des prix</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Google Font -->
@@ -14,6 +14,33 @@
             background: linear-gradient(to right, #eef2f3, #dfe9f3);
             margin: 0;
             padding: 40px;
+        }
+
+        .nav {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-price {
+            background: #2a5298;
+        }
+
+        .btn-dashboard {
+            background: #1e3c72;
+        }
+
+        .nav a:hover {
+            opacity: 0.85;
         }
 
         .container {
@@ -34,8 +61,8 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            overflow: hidden;
             border-radius: 10px;
+            overflow: hidden;
         }
 
         thead {
@@ -80,54 +107,60 @@
 
     </style>
 </head>
+
 <body>
 
+<div class="nav">
+    <a href="/price" class="btn-price">💰 Voir les prix</a>
+    <a href="/index" class="btn-dashboard">🌍 Dashboard</a>
+</div>
+
 <div class="container">
-    <h1>💰 Product Price List</h1>
+    <h1>💰 Liste des prix des produits</h1>
 
     <table>
         <thead>
             <tr>
-                <th>Item</th>
-                <th>Category</th>
-                <th>Origin</th>
-                <th>Price ($)</th>
+                <th>Produit</th>
+                <th>Catégorie</th>
+                <th>Origine</th>
+                <th>Prix ($)</th>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <td>Laptop</td>
+                <td>Ordinateur portable</td>
                 <td><span class="badge cat-tech">Tech</span></td>
                 <td>USA</td>
                 <td class="price">1200</td>
             </tr>
 
             <tr>
-                <td>Rice</td>
-                <td><span class="badge cat-food">Food</span></td>
-                <td>India</td>
+                <td>Riz</td>
+                <td><span class="badge cat-food">Alimentaire</span></td>
+                <td>Inde</td>
                 <td class="price">25</td>
             </tr>
 
             <tr>
-                <td>T-Shirt</td>
-                <td><span class="badge cat-clothes">Clothes</span></td>
-                <td>China</td>
+                <td>T-shirt</td>
+                <td><span class="badge cat-clothes">Vêtements</span></td>
+                <td>Chine</td>
                 <td class="price">15</td>
             </tr>
 
             <tr>
                 <td>Smartphone</td>
                 <td><span class="badge cat-tech">Tech</span></td>
-                <td>South Korea</td>
+                <td>Corée du Sud</td>
                 <td class="price">900</td>
             </tr>
 
             <tr>
-                <td>Coffee</td>
-                <td><span class="badge cat-food">Food</span></td>
-                <td>Brazil</td>
+                <td>Café</td>
+                <td><span class="badge cat-food">Alimentaire</span></td>
+                <td>Brésil</td>
                 <td class="price">10</td>
             </tr>
         </tbody>
