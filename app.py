@@ -1,14 +1,12 @@
 from flask import Flask, render_template
-
+from scanner import scan_all
 app = Flask(__name__)
 
 @app.route("/")
-def home():
-    return render_template("index.html")
+def dashboard():
+    data = scan_all()
+    return render_template("dashboard.html", data=data)
 
-@app.route("/health")
-def health():
-    return {"status": "OK"}, 200
 
 @app.route("/price")
 def price():
@@ -17,6 +15,12 @@ def price():
 @app.route("/babadiama")
 def babadiama():
     return render_template("babadiama.html")
+
+
+
+
+
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
